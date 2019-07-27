@@ -10,7 +10,7 @@ public class veryBeatifulSort {
         ArrayList<String> list = new ArrayList<>();
         Collections.addAll(list, text.split("[^a-zA-Zа-яёА-ЯЁ]+"));
         if (i == 0) {
-            list.sort((comparing(String::toLowerCase)));
+            list.sort(comparing(String::toLowerCase));
         } else if (i == 1) {
             list.sort(comparing(String::length));
         } else {
