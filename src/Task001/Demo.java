@@ -1,5 +1,6 @@
 package Task001;
 
+import java.io.PrintStream;
 import java.util.Map;
 
 public class Demo {
@@ -16,10 +17,10 @@ public class Demo {
                 "– Азрея, – позвал Хаджар.\n" +
                 "\n" +
                 "Глаза постепенно привыкали ко тьме. Учитывая невозможность повернуть голову, Хаджар получил от способности вновь видеть не так уж и много. Он увидел далекий свод, освещенный зеленым светом, бьющим из трещин. Судя по эху, зал, в котором он оказался, был велик.";
-        countRepeatWords.textToTextOnly(text);
-        for(Map.Entry<Long, String> item : countRepeatWords.getTextOnly().entrySet()){
 
-            System.out.printf("Key: %d  Value: %s \n", item.getKey(), item.getValue());
+        for(Map.Entry<String, Long> item : countRepeatWords.textToTextOnly(text).entrySet()){
+
+            System.out.printf("%20s   Кол-во повторений: %d \n", item.getKey(), item.getValue());
         }
 
     }

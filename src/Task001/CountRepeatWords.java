@@ -4,18 +4,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CountRepeatWords {
-    private Map<Long, String> textOnly = new HashMap<>();
-    private Long hashCode = 0L;
-    public Map<Long, String> textToTextOnly (String text){
+    private Map<String,Long> textOnly = new HashMap<>();
+    private Long count;
+
+    public Map<String, Long> textToTextOnly (String text){
         for (String word: text.split("[^a-zA-Zа-яёА-ЯЁ]+")
              ) {
-            textOnly.put(hashCode,word);
-            hashCode++;
+            count = 1L;
+            if (textOnly.containsKey(word.toLowerCase())){
+                count = textOnly.get(word.toLowerCase()) +1;
+                textOnly.put(word.toLowerCase(),count);
+            }
+            textOnly.put(word.toLowerCase(),count);
         }
         return textOnly;
     }
 
-    public Map<Long, String> getTextOnly() {
+    public Map<String, Long> getTextOnly() {
         return textOnly;
     }
 }
