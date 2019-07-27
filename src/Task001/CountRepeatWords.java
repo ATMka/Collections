@@ -12,7 +12,7 @@ public class CountRepeatWords {
              ) {
             count = 1L;
             if (textOnly.containsKey(word.toLowerCase())){
-                count = textOnly.get(word.toLowerCase()) +1;
+                count = textOnly.get(word.toLowerCase()) + 1;
                 textOnly.put(word.toLowerCase(),count);
             }
             textOnly.put(word.toLowerCase(),count);
