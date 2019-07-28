@@ -1,10 +1,8 @@
-//import Task001.Demo;
-//import Task002.Demo;
-import Task003.Demo;
+import service.DemoService;
 
 public class Main {
     public static void main(String[] args) {
-        Demo demo = new Demo();
+        DemoService demo = new DemoService();
         demo.go();
     }
 }
